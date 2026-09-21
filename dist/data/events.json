@@ -1,0 +1,240 @@
+{
+  "generatedAt": "2026-09-20T18:50:03+09:00",
+  "sourceUrl": "https://www.nfuca-tokyo.jp/seminar.html",
+  "schedule": "毎週日曜日 09:17（日本時間）",
+  "events": [
+    {
+      "id": "2533-0",
+      "title": "新学期パワーアップ交流会(SPK)",
+      "category": "東京ブロック",
+      "startDate": "2026-09-26",
+      "endDate": "2026-09-26",
+      "time": "10:00~12:00",
+      "venue": "オンライン(Zoom)※東京版 秋の共済セミナーにご参加の方は、杉並会館でもご参加いただけます。",
+      "deadline": "2026-09-20",
+      "deadlineTime": "23:59",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2533.html",
+      "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2533.html",
+      "publishedAt": "2026-09-04",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2533.html"
+      ],
+      "evidence": {
+        "date": "日時:9/26(土)10:00~12:00",
+        "deadline": [
+          "参加申込〆切:9月20日(日)23:59まで!"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "2537-0",
+      "title": "東京版 秋の共済セミナー",
+      "category": "東京ブロック",
+      "startDate": "2026-09-26",
+      "endDate": "2026-09-26",
+      "time": "13:00~17:30",
+      "venue": "杉並会館 地下会議室",
+      "deadline": "2026-09-24",
+      "deadlineTime": "23:59",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2537.html",
+      "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2537.html",
+      "publishedAt": "2026-09-11",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2532.html",
+        "https://www.nfuca-tokyo.jp/news/news_detail_2537.html"
+      ],
+      "evidence": {
+        "date": "日時:9/26(土)13:00~17:30",
+        "deadline": [
+          "参加申込〆切:9月24日(木)23:59まで!延長しました!"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "2534-0",
+      "title": "かけこみ相談会~9月編~",
+      "category": "東京ブロック",
+      "startDate": "2026-09-28",
+      "endDate": "2026-09-28",
+      "time": "18:00~19:00",
+      "venue": "オンライン(Zoom)にて",
+      "deadline": null,
+      "deadlineTime": "",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2534.html",
+      "deadlineSourceUrl": null,
+      "publishedAt": "2026-05-07",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2534.html"
+      ],
+      "evidence": {
+        "date": "9/28(月)18:00~19:00に",
+        "deadline": []
+      },
+      "notes": []
+    },
+    {
+      "id": "2539-0",
+      "title": "新社会人コース学習会",
+      "category": "連合会・共済連",
+      "startDate": "2026-10-08",
+      "endDate": "2026-10-08",
+      "time": "18:30~20:30",
+      "venue": "zoom",
+      "deadline": "2026-10-05",
+      "deadlineTime": "終日",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2539.html",
+      "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2517.html",
+      "publishedAt": "2026-09-18",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2517.html",
+        "https://www.nfuca-tokyo.jp/news/news_detail_2539.html"
+      ],
+      "evidence": {
+        "date": "日時:10月8日(木) 18:30~20:30",
+        "deadline": []
+      },
+      "notes": []
+    },
+    {
+      "id": "2488-1",
+      "title": "「ふくしま」スタディツアー2026｜ツアー当日",
+      "category": "連合会・共済連",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-11",
+      "time": "",
+      "venue": "福島県浜通り地方",
+      "deadline": "2026-09-07",
+      "deadlineTime": "23:59",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2488.html",
+      "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2488.html",
+      "publishedAt": "2026-07-15",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2488.html"
+      ],
+      "evidence": {
+        "date": "【日時】 2026年10月10日(土)~11日(日) (1泊2日)",
+        "deadline": [
+          "申し込み〆切:2026年9月7日(月)23:59まで"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "2522-0",
+      "title": "議案検討会議",
+      "category": "東京ブロック",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17",
+      "time": "10:00~12:30",
+      "venue": "大学生協杉並会館 地下会議室",
+      "deadline": null,
+      "deadlineTime": "",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2522.html",
+      "deadlineSourceUrl": null,
+      "publishedAt": "2026-08-25",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2522.html"
+      ],
+      "evidence": {
+        "date": "日時:10月17日(土) 10:00~12:30",
+        "deadline": []
+      },
+      "notes": []
+    },
+    {
+      "id": "2523-0",
+      "title": "第4回東京ブロック運営委員会",
+      "category": "東京ブロック",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17",
+      "time": "13:30~17:00",
+      "venue": "大学生協杉並会館 地下会議室",
+      "deadline": null,
+      "deadlineTime": "",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2523.html",
+      "deadlineSourceUrl": null,
+      "publishedAt": "2026-08-25",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2523.html"
+      ],
+      "evidence": {
+        "date": "◯日時:10月17日(土) 13:30~17:00",
+        "deadline": []
+      },
+      "notes": []
+    },
+    {
+      "id": "2488-2",
+      "title": "「ふくしま」スタディツアー2026｜事後交流会",
+      "category": "連合会・共済連",
+      "startDate": "2026-10-29",
+      "endDate": "2026-10-29",
+      "time": "18:00~19:30",
+      "venue": "オンライン(Zoom)",
+      "deadline": "2026-09-07",
+      "deadlineTime": "23:59",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2488.html",
+      "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2488.html",
+      "publishedAt": "2026-07-15",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2488.html"
+      ],
+      "evidence": {
+        "date": "【日程】 2026年10月29日(木)18:00~19:30",
+        "deadline": [
+          "申し込み〆切:2026年9月7日(月)23:59まで"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "2508-0",
+      "title": "第3回東京ブロック学生委員会",
+      "category": "東京ブロック",
+      "startDate": "2026-10-31",
+      "endDate": "2026-10-31",
+      "time": "10:00~12:30",
+      "venue": "大学生協杉並会館 地下会議室",
+      "deadline": null,
+      "deadlineTime": "",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2508.html",
+      "deadlineSourceUrl": null,
+      "publishedAt": "2026-08-06",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2508.html"
+      ],
+      "evidence": {
+        "date": "◯日時:10月31日(土) 10:00~12:30",
+        "deadline": []
+      },
+      "notes": []
+    },
+    {
+      "id": "2509-0",
+      "title": "第3回分野セミナー",
+      "category": "東京ブロック",
+      "startDate": "2026-10-31",
+      "endDate": "2026-10-31",
+      "time": "13:30~17:45",
+      "venue": "大学生協杉並会館 地下会議室",
+      "deadline": null,
+      "deadlineTime": "",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2509.html",
+      "deadlineSourceUrl": null,
+      "publishedAt": "2026-08-17",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2509.html"
+      ],
+      "evidence": {
+        "date": "日時:2026年10月31日(土) 13:30~17:45",
+        "deadline": []
+      },
+      "notes": []
+    }
+  ],
+  "unconfirmed": [],
+  "warnings": [],
+  "articleCount": 45
+}
