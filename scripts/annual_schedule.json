@@ -1,0 +1,41 @@
+{
+  "sha256": "65f28e4585776cc728c5013056dcee0b28b4f80e9ac73d08088d920a852c57b5",
+  "events": [
+    {
+      "title": "東京ブロック大会2026",
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-05",
+      "evidence": "年間予定表2ページ：12月5日(土) 東京ブロック大会2026 対面"
+    }
+  ],
+  "unconfirmed": [
+    {
+      "title": "第3回エリア連帯（南エリア）",
+      "category": "南エリア",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/nus_im/webapp/data_file/260305125256_1.pdf",
+      "publishedAt": "2026-03-05",
+      "reason": "年間予定表では2026年11月上旬の予定。開催日・申込締切は未発表。",
+      "annualCategory": true
+    },
+    {
+      "title": "第3回エリア連帯（総武エリア）",
+      "category": "総武エリア",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/nus_im/webapp/data_file/260305125256_1.pdf",
+      "publishedAt": "2026-03-05",
+      "reason": "年間予定表では2026年11月上旬の予定。開催日・申込締切は未発表。",
+      "annualCategory": true
+    },
+    {
+      "title": "第3回エリア連帯（北甲エリア）",
+      "category": "北甲エリア",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/nus_im/webapp/data_file/260305125256_1.pdf",
+      "publishedAt": "2026-03-05",
+      "reason": "年間予定表では2026年11月上旬の予定。開催日・申込締切は未発表。",
+      "annualCategory": true
+    }
+  ],
+  "peaceDeadline": {
+    "url": "https://www.nfuca-tokyo.jp/nus_im/webapp/data_file/260710041926_2.pdf",
+    "sha256": "e827ad66950d1ad2006d42a5721fd609172ee97aaf4a64cd794349faf88ef4f0"
+  }
+}
