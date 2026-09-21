@@ -4,11 +4,11 @@ import {tokyoToday,expandEntries,monthDays} from '../dist/calendar-core.mjs';
 test('date boundary follows Japan even on a UTC computer',()=>{
  assert.equal(tokyoToday(new Date('2026-09-19T15:01:00Z')),'2026-09-20');
 });
-test('multi-day event appears on every day; expired deadlines are hidden',()=>{
+test('past events and deadlines stay visible throughout the fiscal year',()=>{
  const events=[{title:'ツアー',startDate:'2026-10-10',endDate:'2026-10-11',deadline:'2026-09-07'}];
- assert.deepEqual(expandEntries(events,'2026-09-20').map(e=>e.date),['2026-10-10','2026-10-11']);
- assert.deepEqual(expandEntries(events,'2026-10-11').map(e=>e.date),['2026-10-11']);
- assert.deepEqual(expandEntries(events,'2026-10-12'),[]);
+ assert.deepEqual(expandEntries(events,'2026-09-20').map(e=>e.date),['2026-09-07','2026-10-10','2026-10-11']);
+ assert.deepEqual(expandEntries(events,'2026-10-11').map(e=>e.date),['2026-09-07','2026-10-10','2026-10-11']);
+ assert.equal(expandEntries(events,'2027-03-31').length,3);
 });
 test('deadline and event on the same date stay distinct',()=>{
  const entries=expandEntries([{title:'会',startDate:'2026-09-20',endDate:'2026-09-20',deadline:'2026-09-20'}],'2026-09-20');
