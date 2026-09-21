@@ -9,10 +9,11 @@ const entries=()=>expandEntries(filtered(),today);
 const dateRange=e=>e.startDate===e.endDate?dayLabel(e.startDate,true):`${dayLabel(e.startDate)}〜${dayLabel(e.endDate,true)}`;
 const deadlineText=e=>e.deadline?`${dayLabel(e.deadline,true)}${e.deadlineTime?' '+e.deadlineTime:''}${e.deadline<today?'（締切済み）':''}`:'記載なし・原文をご確認ください';
 function eventDetail(e){
-  return `<article class="event-detail"><span class="pill ${e.kind==='deadline'?'deadline':''}">${e.kind==='deadline'?'申込締切':'開催日'}</span><h3>${esc(e.title)}</h3><p class="meta">${esc(e.category)}</p><p class="meta">開催：${esc(dateRange(e))}<br>${esc(e.time||'時間は原文をご確認ください')}</p><p class="meta">${esc(e.venue||'会場・形式は原文をご確認ください')}</p><p class="deadline-line ${e.deadline&&e.deadline<today?'closed':''}">申込締切：${esc(deadlineText(e))}</p><a class="detail-link" href="${safeUrl(e.sourceUrl)}" target="_blank" rel="noopener noreferrer">公式の案内を見る ↗</a>${e.deadlineSourceUrl&&e.deadlineSourceUrl!==e.sourceUrl?`<br><a class="detail-link" href="${safeUrl(e.deadlineSourceUrl)}" target="_blank" rel="noopener noreferrer">締切の記載元 ↗</a>`:''}</article>`;
+  return `<article class="event-detail"><span class="pill ${e.kind==='deadline'?'deadline':''}">${e.kind==='deadline'?'申込締切':'開催日'}</span><h3>${esc(e.title)}</h3>${e.endDate<today?'<p class="meta">終了したイベント</p>':''}${e.scheduleNote?`<p class="meta">${esc(e.scheduleNote)}</p>`:''}<p class="meta">${esc(e.category)}</p><p class="meta">開催：${esc(dateRange(e))}<br>${esc(e.time||'時間は原文をご確認ください')}</p><p class="meta">${esc(e.venue||'会場・形式は原文をご確認ください')}</p><p class="deadline-line ${e.deadline&&e.deadline<today?'closed':''}">申込締切：${esc(deadlineText(e))}</p><a class="detail-link" href="${safeUrl(e.sourceUrl)}" target="_blank" rel="noopener noreferrer">公式の案内を見る ↗</a>${e.deadlineSourceUrl&&e.deadlineSourceUrl!==e.sourceUrl?`<br><a class="detail-link" href="${safeUrl(e.deadlineSourceUrl)}" target="_blank" rel="noopener noreferrer">締切の記載元 ↗</a>`:''}</article>`;
 }
 function render(){
   const all=entries(), prefix=`${year}-${String(month+1).padStart(2,'0')}`, inMonth=all.filter(e=>e.date.startsWith(prefix));
+  $('month-jump').value=prefix;
   $('month-label').textContent=`${year}年 ${month+1}月`;
   $('month-count').textContent=`開催 ${inMonth.filter(e=>e.kind==='event').length}件・締切 ${inMonth.filter(e=>e.kind==='deadline').length}件`;
   $('month-content').hidden=mode!=='month'; $('list-content').hidden=mode!=='list';
@@ -24,17 +25,18 @@ function render(){
   $('calendar').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{selected=b.dataset.date;if(!selected.startsWith(prefix)){year=Number(selected.slice(0,4));month=Number(selected.slice(5,7))-1;}render();}));
   $('detail-heading').textContent=dayLabel(selected,true);
   const chosen=all.filter(e=>e.date===selected);
-  $('details').innerHTML=chosen.length?chosen.map(eventDetail).join(''):`<div class="empty"><div class="empty-mark" aria-hidden="true">▦</div>${selected<today?'終了した予定は表示していません。':'この日の予定はありません。'}<br>カレンダーの日付を選んでください。</div>`;
+  $('details').innerHTML=chosen.length?chosen.map(eventDetail).join(''):`<div class="empty"><div class="empty-mark" aria-hidden="true">▦</div>この日の予定はありません。<br>カレンダーの日付を選んでください。</div>`;
   $('list-content').innerHTML=inMonth.length?inMonth.map(e=>`<div class="list-row"><div class="list-date">${dayLabel(e.date,true)}</div>${eventDetail(e)}</div>`).join(''):'<p class="empty">この月の予定はありません。</p>';
   const upcoming=filtered().filter(e=>e.endDate>=today).sort((a,b)=>a.startDate.localeCompare(b.startDate));
   $('upcoming-count').textContent=`${upcoming.length}件`;
-  $('upcoming').innerHTML=upcoming.length?upcoming.map(e=>`<article class="upcoming-card"><div class="date-block">${Number(e.startDate.slice(5,7))}月<strong>${Number(e.startDate.slice(8))}</strong>${e.endDate!==e.startDate?'〜'+dayLabel(e.endDate):new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',weekday:'short'}).format(new Date(e.startDate+'T12:00:00+09:00'))}</div><div><span class="category-label">${esc(e.category)}</span><h3><a href="${safeUrl(e.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(e.title)} ↗</a></h3><p class="meta">${esc(e.time||'時間は原文で確認')}</p><p class="meta">${esc(e.venue||'会場・形式は原文で確認')}</p><p class="deadline-line ${e.deadline&&e.deadline<today?'closed':''}">締切：${esc(deadlineText(e))}</p></div></article>`).join(''):'<p class="empty">現在掲載されている開催予定はありません。</p>';
+  $('upcoming').innerHTML=upcoming.length?upcoming.map(e=>`<article class="upcoming-card"><div class="date-block">${Number(e.startDate.slice(5,7))}月<strong>${Number(e.startDate.slice(8))}</strong>${e.endDate!==e.startDate?'〜'+dayLabel(e.endDate):new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',weekday:'short'}).format(new Date(e.startDate+'T12:00:00+09:00'))}</div><div><span class="category-label">${esc(e.category)}</span><h3><a href="${safeUrl(e.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(e.title)} ↗</a></h3><p class="meta">${esc(e.time||'時間は原文で確認')}</p>${e.scheduleNote?`<p class="meta">${esc(e.scheduleNote)}</p>`:''}<p class="meta">${esc(e.venue||'会場・形式は原文で確認')}</p><p class="deadline-line ${e.deadline&&e.deadline<today?'closed':''}">締切：${esc(deadlineText(e))}</p></div></article>`).join(''):'<p class="empty">現在掲載されている開催予定はありません。</p>';
   const unknown=(data.unconfirmed||[]).filter(e=>category==='all'||e.category===category);
   $('unconfirmed-section').hidden=!unknown.length;
   $('unconfirmed').innerHTML=unknown.map(e=>`<div class="unknown-item"><a href="${safeUrl(e.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(e.title)} ↗</a><br><span class="meta">${esc(e.reason)}</span></div>`).join('');
 }
 function moveMonth(n){const d=new Date(Date.UTC(year,month+n,1));year=d.getUTCFullYear();month=d.getUTCMonth();selected=`${year}-${String(month+1).padStart(2,'0')}-01`;render();}
 $('prev').onclick=()=>moveMonth(-1);$('next').onclick=()=>moveMonth(1);$('today').onclick=()=>{today=tokyoToday();year=Number(today.slice(0,4));month=Number(today.slice(5,7))-1;selected=today;render();};
+$('month-jump').onchange=e=>{year=Number(e.target.value.slice(0,4));month=Number(e.target.value.slice(5,7))-1;selected=e.target.value+'-01';render();};
 $('category').onchange=e=>{category=e.target.value;render();};$('month-view').onclick=()=>{mode='month';render();};$('list-view').onclick=()=>{mode='list';render();};
 function showNotice(text){$('notice').hidden=false;$('notice').textContent=text;}
 render();
