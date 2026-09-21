@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="大学生協東京ブロックのセミナー開催日と申込締切をカレンダーで確認。各記事の案内へのリンク付き。">
+  <meta name="theme-color" content="#174acb">
+  <title>セミナーカレンダー | 大学生協東京ブロック</title>
+  <link rel="stylesheet" href="./style.css"><script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="masthead"><div class="mast-inner"><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">▦</span><span>大学生協 東京ブロック<span class="brand-caption">SEMINAR CALENDAR</span></span></a><a class="source-link" href="https://www.nfuca-tokyo.jp/seminar.html" target="_blank" rel="noopener noreferrer">公式のお知らせ <span aria-hidden="true">↗</span></a></div></header>
+  <main>
+    <div class="page-heading"><div><p class="eyebrow">学びと交流の予定を、ひと目で。</p><h1>セミナーカレンダー</h1></div><div class="update"><p id="updated">掲載情報を読み込んでいます</p><span>毎週日曜日に更新予定</span></div></div>
+    <div id="notice" role="status" hidden></div>
+    <section class="workspace" aria-label="セミナーの予定">
+      <div class="calendar-panel">
+        <div class="toolbar"><div class="month-nav"><h2 id="month-label"></h2><button id="prev" class="icon-button" aria-label="前の月">‹</button><button id="next" class="icon-button" aria-label="次の月">›</button><button id="today" class="quiet-button">今月</button></div><div class="view-switch" aria-label="表示形式"><button id="month-view" aria-pressed="true">月表示</button><button id="list-view" aria-pressed="false">一覧</button></div></div>
+        <div class="filter-row"><label for="category">エリア</label><select id="category"><option value="all">すべてのエリア</option><option>東京ブロック</option><option>連合会・共済連</option><option>南エリア</option><option>総武エリア</option><option>武蔵野エリア</option><option>北甲エリア</option></select><div class="legend"><span class="event-key">開催日</span><span class="deadline-key">申込締切</span></div></div>
+        <div id="month-content"><div class="weekdays" aria-hidden="true"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div><div id="calendar" class="calendar" aria-label="日付を選んで予定を見る"></div></div>
+        <div id="list-content" hidden></div>
+        <div class="calendar-footer"><span id="month-count"></span><span>日付を選ぶと詳細が表示されます</span></div>
+      </div>
+      <aside class="details-panel" aria-labelledby="detail-heading" aria-live="polite"><p class="eyebrow">SELECTED DAY</p><h2 id="detail-heading"></h2><div id="details"></div></aside>
+    </section>
+    <section class="upcoming-section" aria-labelledby="upcoming-heading"><div class="section-heading"><h2 id="upcoming-heading">これからの開催予定</h2><span id="upcoming-count"></span></div><div id="upcoming" class="upcoming-grid"></div></section>
+    <section id="unconfirmed-section" class="unconfirmed" hidden><h2>日付確認要</h2><p>本文から日程を確定できないお知らせです。原文をご確認ください。</p><div id="unconfirmed"></div></section>
+    <footer><p>大学生協東京ブロックの公開情報をもとにした非公式カレンダーです。変更・中止・申込条件は、必ず公式の案内をご確認ください。</p><a href="https://www.nfuca-tokyo.jp/seminar.html" target="_blank" rel="noopener noreferrer">情報元：大学生協東京ブロック ↗</a></footer>
+  </main>
+  <noscript>カレンダーの表示にはJavaScriptが必要です。<a href="https://www.nfuca-tokyo.jp/seminar.html">公式のお知らせをご覧ください。</a></noscript>
+</body>
+</html>
