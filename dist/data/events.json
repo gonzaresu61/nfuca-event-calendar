@@ -1,8 +1,9 @@
 {
+  "unavailableArticleCount": 1,
   "fiscalYear": 2026,
   "yearStart": "2026-04-01",
   "yearEnd": "2027-03-31",
-  "generatedAt": "2026-09-21T16:24:52+09:00",
+  "generatedAt": "2026-09-28T11:07:02+09:00",
   "sourceUrl": "https://www.nfuca-tokyo.jp/seminar.html",
   "schedule": "毎週日曜日 09:17（日本時間）",
   "events": [
@@ -100,7 +101,6 @@
       "publishedAt": "2026-04-16",
       "sources": [
         "https://www.nfuca-tokyo.jp/news/news_detail_2476.html",
-        "https://www.nfuca-tokyo.jp/news/news_detail_2384.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2399.html"
       ],
       "evidence": {
@@ -285,6 +285,7 @@
       "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2396.html",
       "publishedAt": "2026-04-15",
       "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2541.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2396.html"
       ],
       "evidence": {
@@ -1365,6 +1366,30 @@
       "scheduleNote": "開催報告内の次回予告・詳細は原文で確認"
     },
     {
+      "report": false,
+      "scheduleNote": "",
+      "id": "2547-0",
+      "title": "第2回南エリアミーティング",
+      "category": "南エリア",
+      "startDate": "2026-11-15",
+      "endDate": "2026-11-15",
+      "time": "12:30~17:30",
+      "venue": "東京農業大学 (小田急小田原線 経堂駅から徒歩約15分)",
+      "deadline": null,
+      "deadlineTime": "",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2547.html",
+      "deadlineSourceUrl": null,
+      "publishedAt": "2026-09-25",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2547.html"
+      ],
+      "evidence": {
+        "date": "日程:11月15日(日)12:30~17:30 (時間は予定となります)",
+        "deadline": []
+      },
+      "notes": []
+    },
+    {
       "id": "2371-annual",
       "category": "東京ブロック",
       "time": "",
@@ -1391,14 +1416,6 @@
   ],
   "unconfirmed": [
     {
-      "title": "第3回エリア連帯（南エリア）",
-      "category": "南エリア",
-      "sourceUrl": "https://www.nfuca-tokyo.jp/nus_im/webapp/data_file/260305125256_1.pdf",
-      "publishedAt": "2026-03-05",
-      "reason": "年間予定表では2026年11月上旬の予定。開催日・申込締切は未発表。",
-      "annualCategory": true
-    },
-    {
       "title": "第3回エリア連帯（総武エリア）",
       "category": "総武エリア",
       "sourceUrl": "https://www.nfuca-tokyo.jp/nus_im/webapp/data_file/260305125256_1.pdf",
@@ -1420,8 +1437,17 @@
       "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2445.html",
       "publishedAt": "2026-06-05",
       "reason": "日付と曜日が一致しないため原文確認が必要です"
+    },
+    {
+      "title": "北甲エリアミーティング（元記事の確認）",
+      "category": "北甲エリア",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2384.html",
+      "publishedAt": "2026-09-28",
+      "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
     }
   ],
-  "warnings": [],
-  "articleCount": 110
+  "warnings": [
+    "https://www.nfuca-tokyo.jp/news/news_detail_2384.html"
+  ],
+  "articleCount": 109
 }
