@@ -1,10 +1,14 @@
 import sys
 import unittest
+import json
+from tempfile import TemporaryDirectory
+from urllib.error import HTTPError
+from contextlib import ExitStack
 from datetime import date
 from pathlib import Path
 from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from update_events import extract_article, merge_events, date_span, fetch
+from update_events import extract_article, merge_events, date_span, fetch, load_article, retain_unavailable, collect
 
 def article(body,title='【開催案内】テスト交流会',posted='2026年09月04日(金)'):
     return f'<div id="contArea"><div class="titleArea"><h2>{title}</h2><span class="day">{posted}</span></div><div class="clearfix">{body}</div></div>'
@@ -81,6 +85,72 @@ class DateTests(unittest.TestCase):
     def test_shared_program_selects_matching_time(self):
         events,_=extract('日時：7月11日(土)<br>10:00～12:30 第3回ブロック運営委員会<br>12:30～13:30 お昼休憩<br>13:30～17:30 新学期スタート会議',title='【開催案内】新学期スタート会議2026')
         self.assertEqual(events[0]['time'],'13:30~17:30')
+    def test_unavailable_article_does_not_retry_or_abort(self):
+        url='https://www.nfuca-tokyo.jp/news/news_detail_2384.html'
+        for code in [401,403,404,410]:
+            with self.subTest(code=code), patch('update_events.urlopen',side_effect=HTTPError(url,code,'unavailable',{},None)) as request, patch('update_events.time.sleep') as sleep:
+                result=load_article(url,'北甲エリア')
+                self.assertEqual(result,(url,'北甲エリア',None,code))
+                self.assertEqual(request.call_count,1)
+                sleep.assert_not_called()
+    def test_inaccessible_primary_keeps_original_verification_time(self):
+        events,_=extract('日時：5月9日(土)10:00～12:00')
+        previous={'events':events,'generatedAt':'2026-09-21T16:24:52+09:00'}
+        unavailable=[(events[0]['sourceUrl'],'東京ブロック',401)]
+        saved,notices=retain_unavailable(previous,unavailable,'2026-09-28')
+        self.assertEqual(saved[0]['startDate'],'2026-05-09')
+        self.assertEqual(saved[0]['lastVerifiedAt'],previous['generatedAt'])
+        self.assertNotIn('sourceUnavailable',events[0])
+        again,_=retain_unavailable({'events':saved,'generatedAt':'2026-09-28'},unavailable,'2026-10-04')
+        self.assertEqual(again[0]['lastVerifiedAt'],previous['generatedAt'])
+        self.assertEqual(again[0]['scheduleNote'],saved[0]['scheduleNote'])
+        self.assertIn('HTTP 401',notices[0]['reason'])
+    def test_current_notice_beats_inaccessible_previous_notice(self):
+        old,_=extract('日時：5月9日(土)10:00～12:00',posted='2026年09月18日(金)')
+        saved,_=retain_unavailable({'events':old,'generatedAt':'2026-09-21'},[(old[0]['sourceUrl'],'東京ブロック',401)],'2026-09-28')
+        current,_=extract('日時：5月9日(土)10:00～12:00','1001')
+        result=merge_events(saved+current)
+        self.assertEqual(len(result),1)
+        self.assertEqual(result[0]['id'],'1001-0')
+        self.assertFalse(result[0].get('sourceUnavailable',False))
+    def test_collect_continues_with_blocked_history_and_new_event(self):
+        old,_=extract('日時：5月9日(土)10:00～12:00')
+        old_url=old[0]['sourceUrl']
+        new_url='https://www.nfuca-tokyo.jp/news/news_detail_1001.html'
+        listing=f'<article><a href="{new_url}">新しい案内</a></article>'
+        def mock_fetch(url):
+            if url==old_url:raise HTTPError(url,401,'restricted',{},None)
+            if url==new_url:return article('日時：10月8日(木)18:30～20:30',title='【開催案内】新規交流会')
+            return listing
+        with TemporaryDirectory() as tmp, ExitStack() as stack:
+            root=Path(tmp);path=root/'dist/data/events.json';path.parent.mkdir(parents=True)
+            path.write_text(json.dumps({'events':old,'generatedAt':'2026-09-21'}))
+            stack.enter_context(patch('update_events.ROOT',root))
+            stack.enter_context(patch('update_events.fetch',side_effect=mock_fetch))
+            stack.enter_context(patch('update_events.annual_schedule',return_value=([],[])))
+            stack.enter_context(patch('update_events.apply_pdf_deadlines',return_value=[]))
+            stack.enter_context(patch('builtins.print'))
+            result=collect()
+            self.assertEqual(len(result['events']),2)
+            self.assertEqual(result['articleCount'],1)
+            self.assertEqual(result['unavailableArticleCount'],1)
+            self.assertIn(old_url,result['warnings'])
+            self.assertEqual(json.loads(path.read_text()),result)
+    def test_transient_article_failure_keeps_last_published_data(self):
+        with TemporaryDirectory() as tmp, ExitStack() as stack:
+            root=Path(tmp);path=root/'dist/data/events.json';path.parent.mkdir(parents=True)
+            previous='{"events": [], "generatedAt": "2026-09-21"}';path.write_text(previous)
+            stack.enter_context(patch('update_events.ROOT',root))
+            stack.enter_context(patch('update_events.fetch',return_value='<article><a href="https://www.nfuca-tokyo.jp/news/news_detail_1000.html">案内</a></article>'))
+            stack.enter_context(patch('update_events.load_article',side_effect=RuntimeError('timeout')))
+            with self.assertRaises(RuntimeError):collect()
+            self.assertEqual(path.read_text(),previous)
+    def test_report_comma_days_merge_with_two_day_notice(self):
+        notice,_=extract('日時：5月30日(土)～31日(日)',title='【開催案内】生協スクール2026')
+        report,_=extract('本日は5月30日(土)、31日(日)に開催されました。',id='2541',title='【開催報告】生協スクール2026')
+        self.assertEqual(report[0]['endDate'],'2026-05-31')
+        self.assertEqual(len(merge_events(notice+report)),1)
+        with self.assertRaises(ValueError):date_span('5月30日(土)、6月2日(火)',date(2026,5,1))
     def test_transport_failure_aborts(self):
         with patch('update_events.urlopen',side_effect=TimeoutError),patch('update_events.time.sleep'):
             with self.assertRaises(RuntimeError):fetch('https://www.nfuca-tokyo.jp/seminar.html')
