@@ -2,6 +2,7 @@
 """Collect public seminar dates conservatively. Never use publication dates as events."""
 from __future__ import annotations
 import argparse
+from copy import deepcopy
 import hashlib
 import json
 import re
@@ -12,6 +13,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError
 from zoneinfo import ZoneInfo
 from bs4 import BeautifulSoup
 
@@ -82,17 +84,19 @@ def date_span(line, reference):
     end=first
     tail=line[matches[0].end():]
     # A date after a time is allowed, e.g. 6月20日13:00〜21日16:00.
-    range_marker=re.search(r'[~〜～−・-]',tail)
+    range_marker=re.search(r'[~〜～−・、,-]',tail)
     if len(matches)>1:
         if not range_marker:
             raise ValueError('複数の開催日は個別確認が必要です')
         end=parsed_date(matches[1],first)
     elif range_marker:
-        short=re.search(r'[~〜～−・-]\s*(\d{1,2})\s*(?:日|(?=\())(?:\s*\(([月火水木金土日])\))?',tail)
+        short=re.search(r'[~〜～−・、,-]\s*(\d{1,2})\s*(?:日|(?=\())(?:\s*\(([月火水木金土日])\))?',tail)
         if short:
             end=date(first.year,first.month,int(short[1]))
             if short[2] and '月火水木金土日'[end.weekday()]!=short[2]:
                 raise ValueError('終了日と曜日が一致しません')
+    if re.search(r'[、,]\s*(?:\d{1,2}月)?\d{1,2}日',tail) and (end-first).days!=1:
+        raise ValueError('連続しない複数日は個別確認が必要です')
     if end<first or (end-first).days>14:
         raise ValueError('開催期間を確認してください')
     return first,end
@@ -209,7 +213,7 @@ def extract_article(raw, url, category):
 
 def merge_events(events):
     grouped={}
-    for e in sorted(events,key=lambda x:(not x.get('report',False),x['publishedAt'],int(x['id'].split('-')[0]))):
+    for e in sorted(events,key=lambda x:(not x.get('sourceUnavailable',False),not x.get('report',False),x['publishedAt'],int(x['id'].split('-')[0]))):
         key=(title_key(e['title']),e['startDate'],e['endDate'],e['category'])
         previous=grouped.get(key)
         if previous:
@@ -231,10 +235,45 @@ def fetch(url):
             req=Request(url,headers={'User-Agent':'NUFCA-Event-Calendar/1.0 (+public event dates; weekly refresh)'})
             with urlopen(req,timeout=30) as r:
                 return r.read().decode('utf-8')
+        except HTTPError as error:
+            if error.code in {401,403,404,410}:raise
+            last=error
+            if attempt<2:time.sleep(1+attempt)
         except Exception as error:
             last=error
             if attempt<2:time.sleep(1+attempt)
     raise RuntimeError(f'取得に失敗: {url}: {last}')
+
+
+def load_article(url,category,cache=None):
+    ident=re.search(r'news_detail_(\d+)',url)[1]
+    try:
+        raw=(cache/f'article-{ident}.html').read_text() if cache else fetch(url)
+        return url,category,raw,None
+    except HTTPError as error:
+        # Only article-level access/removal responses are recoverable. Lists, PDFs,
+        # timeouts and server failures still abort rather than publish incomplete data.
+        if error.code not in {401,403,404,410}:raise
+        return url,category,None,error.code
+
+
+def retain_unavailable(previous,unavailable,today):
+    preserved=[];notices=[]
+    for url,category,code in unavailable:
+        known=[e for e in previous.get('events',[]) if url in e.get('sources',[e['sourceUrl']])]
+        title=known[0]['title'] if known else '記事 '+re.search(r'news_detail_(\d+)',url)[1]
+        reason=f'公式記事を再取得できませんでした（HTTP {code}）。'
+        for item in known:
+            if item['sourceUrl']!=url:continue
+            event=deepcopy(item)
+            verified=event.get('lastVerifiedAt',previous.get('generatedAt','不明'))
+            event['lastVerifiedAt']=verified
+            event['sourceUnavailable']=True
+            if not item.get('sourceUnavailable'):
+                event['scheduleNote']=(item.get('scheduleNote','')+' / ' if item.get('scheduleNote') else '')+f'元記事を再確認できないため前回情報を掲載（確認日時：{verified}）'
+            preserved.append(event)
+        notices.append(dict(title=title+'（元記事の確認）',category=category,sourceUrl=url,publishedAt=today,reason=reason+'現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。'))
+    return preserved,notices
 
 
 def apply_pdf_deadlines(events,cache=None):
@@ -283,17 +322,16 @@ def collect(cache=None):
     for item in previous.get('events',[])+previous.get('unconfirmed',[]):
         for url in item.get('sources',[item['sourceUrl']]):
             if re.search(r'/news/news_detail_\d+\.html$',url):urls.setdefault(url,item['category'])
-    def load(item):
-        url,category=item
-        ident=re.search(r'news_detail_(\d+)',url)[1]
-        raw=(cache/f'article-{ident}.html').read_text() if cache else fetch(url)
-        return url,category,raw
-    # If any fetch fails, abort and retain the last successfully published calendar.
+    # Access restrictions on an individual historical article must not stop all
+    # updates. Unexpected transport/list failures continue to retain the whole build.
     with ThreadPoolExecutor(max_workers=3) as pool:
-        articles=list(pool.map(load,urls.items()))
+        results=list(pool.map(lambda item:load_article(*item,cache),urls.items()))
+    articles=[(url,category,raw) for url,category,raw,code in results if code is None]
+    unavailable=[(url,category,code) for url,category,raw,code in results if code is not None]
     now=datetime.now(ZoneInfo('Asia/Tokyo'))
     today=now.date().isoformat()
-    events=[];unconfirmed=[];warnings=[];parsed_ids=set()
+    events,unavailable_notices=retain_unavailable(previous,unavailable,today)
+    unconfirmed=[];warnings=[];parsed_ids=set()
     for url,category,raw in articles:
         try:
             found,unknown=extract_article(raw,url,category)
@@ -323,7 +361,9 @@ def collect(cache=None):
         if e['notes']:
             unconfirmed.append(dict(title=e['title']+'（締切確認）',category=e['category'],sourceUrl=e['sourceUrl'],publishedAt=e['publishedAt'],reason=' / '.join(e['notes'])))
     warnings=[url for url in warnings if any(u['sourceUrl']==url for u in unconfirmed)]
-    result=dict(fiscalYear=FISCAL_YEAR,yearStart=YEAR_START,yearEnd=YEAR_END,generatedAt=now.isoformat(timespec='seconds'),sourceUrl=SOURCE,schedule='毎週日曜日 09:17（日本時間）',events=merged,unconfirmed=unconfirmed,warnings=warnings,articleCount=len(articles))
+    unconfirmed.extend(unavailable_notices)
+    warnings=list(dict.fromkeys(warnings+[u['sourceUrl'] for u in unavailable_notices]))
+    result=dict(unavailableArticleCount=len(unavailable),fiscalYear=FISCAL_YEAR,yearStart=YEAR_START,yearEnd=YEAR_END,generatedAt=now.isoformat(timespec='seconds'),sourceUrl=SOURCE,schedule='毎週日曜日 09:17（日本時間）',events=merged,unconfirmed=unconfirmed,warnings=warnings,articleCount=len(articles))
     for e in result['events']:
         assert date.fromisoformat(e['startDate'])<=date.fromisoformat(e['endDate'])
         if e['deadline']:assert date.fromisoformat(e['deadline'])<=date.fromisoformat(e['startDate'])
