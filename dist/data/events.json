@@ -1,9 +1,9 @@
 {
-  "unavailableArticleCount": 1,
+  "unavailableArticleCount": 3,
   "fiscalYear": 2026,
   "yearStart": "2026-04-01",
   "yearEnd": "2027-03-31",
-  "generatedAt": "2026-09-28T11:07:02+09:00",
+  "generatedAt": "2026-10-04T14:52:37+09:00",
   "sourceUrl": "https://www.nfuca-tokyo.jp/seminar.html",
   "schedule": "毎週日曜日 09:17（日本時間）",
   "events": [
@@ -24,7 +24,6 @@
       "publishedAt": "2026-04-17",
       "sources": [
         "https://www.nfuca-tokyo.jp/news/news_detail_2403.html",
-        "https://www.nfuca-tokyo.jp/news/news_detail_2386.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2400.html"
       ],
       "evidence": {
@@ -112,6 +111,31 @@
       "notes": []
     },
     {
+      "report": true,
+      "scheduleNote": "開催報告から確認",
+      "id": "2473-0",
+      "title": "第1回南エリアおしゃべり会",
+      "category": "南エリア",
+      "startDate": "2026-05-09",
+      "endDate": "2026-05-09",
+      "time": "",
+      "venue": "東京海洋大学品川キャンパス(JR線品川駅から徒歩10分)",
+      "deadline": "2026-05-04",
+      "deadlineTime": "23:59",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2473.html",
+      "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2388.html",
+      "publishedAt": "2026-07-01",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2473.html",
+        "https://www.nfuca-tokyo.jp/news/news_detail_2388.html"
+      ],
+      "evidence": {
+        "date": "本日は2026年5月9日(土)に行われました",
+        "deadline": []
+      },
+      "notes": []
+    },
+    {
       "report": false,
       "scheduleNote": "",
       "id": "2417-0",
@@ -136,33 +160,6 @@
         "deadline": [
           "本セミナーは、学生委員会の役割を再確認しつつ、自大学生協の取り組みを紹介し合いながら武蔵野エリアの学生委員会同士の交流を深めていく企画となっております。より多くの学生委員に参加してもらいたいため、申込締切を5月7日(木) 終日に延長しました!",
           "・申込締切:2026年5月7日(木) 終日※延長しました!"
-        ]
-      },
-      "notes": []
-    },
-    {
-      "report": false,
-      "scheduleNote": "",
-      "id": "2388-0",
-      "title": "第1回南エリアおしゃべり会",
-      "category": "南エリア",
-      "startDate": "2026-05-09",
-      "endDate": "2026-05-09",
-      "time": "13:00~16:10 / 17:00",
-      "venue": "東京海洋大学品川キャンパス(JR線品川駅から徒歩10分)",
-      "deadline": "2026-05-04",
-      "deadlineTime": "23:59",
-      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2388.html",
-      "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2388.html",
-      "publishedAt": "2026-04-06",
-      "sources": [
-        "https://www.nfuca-tokyo.jp/news/news_detail_2473.html",
-        "https://www.nfuca-tokyo.jp/news/news_detail_2388.html"
-      ],
-      "evidence": {
-        "date": "日程:5月9日(土)13:00~16:10(アフター企画終了17:00)",
-        "deadline": [
-          "締め切りは5月4日(月)23:59までとなっております。"
         ]
       },
       "notes": []
@@ -1160,6 +1157,8 @@
       "deadlineSourceUrl": null,
       "publishedAt": "2026-05-07",
       "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2549.html",
+        "https://www.nfuca-tokyo.jp/news/news_detail_2548.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2534.html"
       ],
       "evidence": {
@@ -1222,24 +1221,27 @@
     {
       "report": false,
       "scheduleNote": "",
-      "id": "2522-0",
+      "id": "2550-0",
       "title": "議案検討会議",
       "category": "東京ブロック",
       "startDate": "2026-10-17",
       "endDate": "2026-10-17",
       "time": "10:00~12:30",
       "venue": "大学生協杉並会館 地下会議室",
-      "deadline": null,
-      "deadlineTime": "",
-      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2522.html",
-      "deadlineSourceUrl": null,
-      "publishedAt": "2026-08-25",
+      "deadline": "2026-10-09",
+      "deadlineTime": "終日",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2550.html",
+      "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2550.html",
+      "publishedAt": "2026-10-02",
       "sources": [
-        "https://www.nfuca-tokyo.jp/news/news_detail_2522.html"
+        "https://www.nfuca-tokyo.jp/news/news_detail_2522.html",
+        "https://www.nfuca-tokyo.jp/news/news_detail_2550.html"
       ],
       "evidence": {
         "date": "日時:10月17日(土) 10:00~12:30",
-        "deadline": []
+        "deadline": [
+          "申込締切:10月9日(金) 終日"
+        ]
       },
       "notes": []
     },
@@ -1266,6 +1268,30 @@
         "deadline": []
       },
       "notes": []
+    },
+    {
+      "id": "2549-next-4",
+      "title": "かけこみ相談会～10月編～",
+      "category": "東京ブロック",
+      "startDate": "2026-10-19",
+      "endDate": "2026-10-19",
+      "time": "",
+      "venue": "",
+      "deadline": null,
+      "deadlineTime": "",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2549.html",
+      "deadlineSourceUrl": null,
+      "publishedAt": "2026-06-10",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2549.html"
+      ],
+      "evidence": {
+        "date": "次回の開催は10月19日(月)!トークテーマは「27年度の新学期活動について」。これからの新学期活動にお悩みをお持ちの方に特におすすめです!ぜひご参加ください!",
+        "deadline": []
+      },
+      "notes": [],
+      "report": true,
+      "scheduleNote": "開催報告内の次回予告・詳細は原文で確認"
     },
     {
       "report": false,
@@ -1296,7 +1322,7 @@
     {
       "report": false,
       "scheduleNote": "",
-      "id": "2508-0",
+      "id": "2546-0",
       "title": "第3回東京ブロック学生委員会",
       "category": "東京ブロック",
       "startDate": "2026-10-31",
@@ -1305,11 +1331,12 @@
       "venue": "大学生協杉並会館 地下会議室",
       "deadline": null,
       "deadlineTime": "",
-      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2508.html",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2546.html",
       "deadlineSourceUrl": null,
-      "publishedAt": "2026-08-06",
+      "publishedAt": "2026-09-30",
       "sources": [
-        "https://www.nfuca-tokyo.jp/news/news_detail_2508.html"
+        "https://www.nfuca-tokyo.jp/news/news_detail_2508.html",
+        "https://www.nfuca-tokyo.jp/news/news_detail_2546.html"
       ],
       "evidence": {
         "date": "◯日時:10月31日(土) 10:00~12:30",
@@ -1320,24 +1347,27 @@
     {
       "report": false,
       "scheduleNote": "",
-      "id": "2509-0",
+      "id": "2545-0",
       "title": "第3回分野セミナー",
       "category": "東京ブロック",
       "startDate": "2026-10-31",
       "endDate": "2026-10-31",
       "time": "13:30~17:45",
-      "venue": "大学生協杉並会館 地下会議室",
-      "deadline": null,
-      "deadlineTime": "",
-      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2509.html",
-      "deadlineSourceUrl": null,
-      "publishedAt": "2026-08-17",
+      "venue": "大学生協杉並会館",
+      "deadline": "2026-10-23",
+      "deadlineTime": "23:59",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2545.html",
+      "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2545.html",
+      "publishedAt": "2026-09-30",
       "sources": [
-        "https://www.nfuca-tokyo.jp/news/news_detail_2509.html"
+        "https://www.nfuca-tokyo.jp/news/news_detail_2509.html",
+        "https://www.nfuca-tokyo.jp/news/news_detail_2545.html"
       ],
       "evidence": {
-        "date": "日時:2026年10月31日(土) 13:30~17:45",
-        "deadline": []
+        "date": "日時:2026年10月31日(土)13:30~17:45",
+        "deadline": [
+          "参加申し込み期限は、10月23日(金)23:59までです。"
+        ]
       },
       "notes": []
     },
@@ -1439,15 +1469,31 @@
       "reason": "日付と曜日が一致しないため原文確認が必要です"
     },
     {
-      "title": "北甲エリアミーティング（元記事の確認）",
+      "title": "かけこみ相談会~4月編~（元記事の確認）",
+      "category": "東京ブロック",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2386.html",
+      "publishedAt": "2026-10-04",
+      "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
+    },
+    {
+      "title": "第1回南エリアおしゃべり会（元記事の確認）",
+      "category": "南エリア",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2388.html",
+      "publishedAt": "2026-10-04",
+      "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
+    },
+    {
+      "title": "記事 2384（元記事の確認）",
       "category": "北甲エリア",
       "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2384.html",
-      "publishedAt": "2026-09-28",
+      "publishedAt": "2026-10-04",
       "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
     }
   ],
   "warnings": [
+    "https://www.nfuca-tokyo.jp/news/news_detail_2386.html",
+    "https://www.nfuca-tokyo.jp/news/news_detail_2388.html",
     "https://www.nfuca-tokyo.jp/news/news_detail_2384.html"
   ],
-  "articleCount": 109
+  "articleCount": 112
 }
