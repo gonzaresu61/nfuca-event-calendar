@@ -1,9 +1,9 @@
 {
-  "unavailableArticleCount": 3,
+  "unavailableArticleCount": 6,
   "fiscalYear": 2026,
   "yearStart": "2026-04-01",
   "yearEnd": "2027-03-31",
-  "generatedAt": "2026-10-04T14:52:37+09:00",
+  "generatedAt": "2026-10-11T14:46:47+09:00",
   "sourceUrl": "https://www.nfuca-tokyo.jp/seminar.html",
   "schedule": "毎週日曜日 09:17（日本時間）",
   "events": [
@@ -57,29 +57,27 @@
       "notes": []
     },
     {
-      "report": false,
-      "scheduleNote": "",
-      "id": "2393-0",
+      "report": true,
+      "scheduleNote": "開催報告から確認",
+      "id": "2423-0",
       "title": "第1回分野セミナー",
       "category": "東京ブロック",
       "startDate": "2026-05-02",
       "endDate": "2026-05-02",
-      "time": "10:00~16:40",
+      "time": "",
       "venue": "オンライン(Zoom)",
       "deadline": "2026-04-24",
       "deadlineTime": "23:59",
-      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2393.html",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2423.html",
       "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2393.html",
-      "publishedAt": "2026-04-10",
+      "publishedAt": "2026-05-07",
       "sources": [
         "https://www.nfuca-tokyo.jp/news/news_detail_2423.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2393.html"
       ],
       "evidence": {
-        "date": "日時:2026年5月2日(土)10:00~16:40",
-        "deadline": [
-          "参加申し込み期限は、4月24日(金)23:59までです。"
-        ]
+        "date": "本日は5月2日(土)に開催された",
+        "deadline": []
       },
       "notes": []
     },
@@ -119,15 +117,14 @@
       "startDate": "2026-05-09",
       "endDate": "2026-05-09",
       "time": "",
-      "venue": "東京海洋大学品川キャンパス(JR線品川駅から徒歩10分)",
-      "deadline": "2026-05-04",
-      "deadlineTime": "23:59",
+      "venue": "",
+      "deadline": null,
+      "deadlineTime": "",
       "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2473.html",
-      "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2388.html",
+      "deadlineSourceUrl": null,
       "publishedAt": "2026-07-01",
       "sources": [
-        "https://www.nfuca-tokyo.jp/news/news_detail_2473.html",
-        "https://www.nfuca-tokyo.jp/news/news_detail_2388.html"
+        "https://www.nfuca-tokyo.jp/news/news_detail_2473.html"
       ],
       "evidence": {
         "date": "本日は2026年5月9日(土)に行われました",
@@ -152,7 +149,6 @@
       "publishedAt": "2026-05-01",
       "sources": [
         "https://www.nfuca-tokyo.jp/news/news_detail_2460.html",
-        "https://www.nfuca-tokyo.jp/news/news_detail_2395.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2417.html"
       ],
       "evidence": {
@@ -388,7 +384,6 @@
       "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2428.html",
       "publishedAt": "2026-05-12",
       "sources": [
-        "https://www.nfuca-tokyo.jp/news/news_detail_2392.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2428.html"
       ],
       "evidence": {
@@ -415,6 +410,7 @@
       "deadlineSourceUrl": null,
       "publishedAt": "2026-06-05",
       "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2543.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2445.html"
       ],
       "evidence": {
@@ -894,6 +890,7 @@
       "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2500.html",
       "publishedAt": "2026-07-30",
       "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2544.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2500.html"
       ],
       "evidence": {
@@ -998,6 +995,7 @@
       "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2483.html",
       "publishedAt": "2026-07-09",
       "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2561.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2464.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2483.html"
       ],
@@ -1420,6 +1418,56 @@
       "notes": []
     },
     {
+      "report": false,
+      "scheduleNote": "",
+      "id": "2555-0",
+      "title": "第3回総武エリア連帯「そうぶ集中部会」",
+      "category": "総武エリア",
+      "startDate": "2026-11-15",
+      "endDate": "2026-11-15",
+      "time": "13:00~17:30",
+      "venue": "お楽しみに!",
+      "deadline": null,
+      "deadlineTime": "",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2555.html",
+      "deadlineSourceUrl": null,
+      "publishedAt": "2026-10-06",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2555.html"
+      ],
+      "evidence": {
+        "date": "日時:2026年11月15日(日)13:00~17:30(予定)",
+        "deadline": []
+      },
+      "notes": []
+    },
+    {
+      "report": false,
+      "scheduleNote": "",
+      "id": "2557-0",
+      "title": "全国環境セミナー2026（対面）",
+      "category": "連合会・共済連",
+      "startDate": "2026-11-24",
+      "endDate": "2026-11-24",
+      "time": "18:00~20:00",
+      "venue": "オンライン(Zoom)",
+      "deadline": "2026-11-13",
+      "deadlineTime": "17:00",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2557.html",
+      "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2557.html",
+      "publishedAt": "2026-10-06",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2557.html"
+      ],
+      "evidence": {
+        "date": "【日時】 2026年11月24日(火)18:00~20:00",
+        "deadline": [
+          "【申込締切】 2026年11月13日(金)17:00"
+        ]
+      },
+      "notes": []
+    },
+    {
       "id": "2371-annual",
       "category": "東京ブロック",
       "time": "",
@@ -1446,12 +1494,11 @@
   ],
   "unconfirmed": [
     {
-      "title": "第3回エリア連帯（総武エリア）",
-      "category": "総武エリア",
-      "sourceUrl": "https://www.nfuca-tokyo.jp/nus_im/webapp/data_file/260305125256_1.pdf",
-      "publishedAt": "2026-03-05",
-      "reason": "年間予定表では2026年11月上旬の予定。開催日・申込締切は未発表。",
-      "annualCategory": true
+      "title": "「おにぎりアクション2026」開催のお知らせとご参加のお願い",
+      "category": "連合会・共済連",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2562.html",
+      "publishedAt": "2026-10-08",
+      "reason": "本文から開催日を確定できません。添付資料を含め原文をご確認ください。"
     },
     {
       "title": "第3回エリア連帯（北甲エリア）",
@@ -1469,31 +1516,55 @@
       "reason": "日付と曜日が一致しないため原文確認が必要です"
     },
     {
-      "title": "かけこみ相談会~4月編~（元記事の確認）",
+      "title": "第1回分野セミナー（元記事の確認）",
       "category": "東京ブロック",
-      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2386.html",
-      "publishedAt": "2026-10-04",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2393.html",
+      "publishedAt": "2026-10-11",
       "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
     },
     {
       "title": "第1回南エリアおしゃべり会（元記事の確認）",
       "category": "南エリア",
       "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2388.html",
-      "publishedAt": "2026-10-04",
+      "publishedAt": "2026-10-11",
+      "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
+    },
+    {
+      "title": "第1回集まれ!むさっしーず（元記事の確認）",
+      "category": "武蔵野エリア",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2395.html",
+      "publishedAt": "2026-10-11",
+      "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
+    },
+    {
+      "title": "第9回事業と新学期活動全国交流会（元記事の確認）",
+      "category": "連合会・共済連",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2392.html",
+      "publishedAt": "2026-10-11",
+      "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
+    },
+    {
+      "title": "記事 2386（元記事の確認）",
+      "category": "東京ブロック",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2386.html",
+      "publishedAt": "2026-10-11",
       "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
     },
     {
       "title": "記事 2384（元記事の確認）",
       "category": "北甲エリア",
       "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2384.html",
-      "publishedAt": "2026-10-04",
+      "publishedAt": "2026-10-11",
       "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
     }
   ],
   "warnings": [
-    "https://www.nfuca-tokyo.jp/news/news_detail_2386.html",
+    "https://www.nfuca-tokyo.jp/news/news_detail_2393.html",
     "https://www.nfuca-tokyo.jp/news/news_detail_2388.html",
+    "https://www.nfuca-tokyo.jp/news/news_detail_2395.html",
+    "https://www.nfuca-tokyo.jp/news/news_detail_2392.html",
+    "https://www.nfuca-tokyo.jp/news/news_detail_2386.html",
     "https://www.nfuca-tokyo.jp/news/news_detail_2384.html"
   ],
-  "articleCount": 112
+  "articleCount": 114
 }
