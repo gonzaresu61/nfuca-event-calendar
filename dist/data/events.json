@@ -1,33 +1,33 @@
 {
-  "unavailableArticleCount": 6,
+  "unavailableArticleCount": 10,
   "fiscalYear": 2026,
   "yearStart": "2026-04-01",
   "yearEnd": "2027-03-31",
-  "generatedAt": "2026-10-11T14:46:47+09:00",
+  "generatedAt": "2026-10-18T13:33:50+09:00",
   "sourceUrl": "https://www.nfuca-tokyo.jp/seminar.html",
   "schedule": "毎週日曜日 09:17（日本時間）",
   "events": [
     {
-      "report": false,
-      "scheduleNote": "",
-      "id": "2400-0",
+      "report": true,
+      "scheduleNote": "開催報告から確認",
+      "id": "2403-0",
       "title": "かけこみ相談会~4月編~",
       "category": "東京ブロック",
       "startDate": "2026-04-20",
       "endDate": "2026-04-20",
-      "time": "18:00~19:00",
+      "time": "",
       "venue": "オンライン(Zoom)にて",
       "deadline": null,
       "deadlineTime": "",
-      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2400.html",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2403.html",
       "deadlineSourceUrl": null,
-      "publishedAt": "2026-04-17",
+      "publishedAt": "2026-04-21",
       "sources": [
         "https://www.nfuca-tokyo.jp/news/news_detail_2403.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2400.html"
       ],
       "evidence": {
-        "date": "4/20(月)18:00~19:00に",
+        "date": "本日は4月20日(月)に開催された「かけこみ相談会~4月編~」の開催報告を発信します。",
         "deadline": []
       },
       "notes": []
@@ -65,15 +65,14 @@
       "startDate": "2026-05-02",
       "endDate": "2026-05-02",
       "time": "",
-      "venue": "オンライン(Zoom)",
-      "deadline": "2026-04-24",
-      "deadlineTime": "23:59",
+      "venue": "",
+      "deadline": null,
+      "deadlineTime": "",
       "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2423.html",
-      "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2393.html",
+      "deadlineSourceUrl": null,
       "publishedAt": "2026-05-07",
       "sources": [
-        "https://www.nfuca-tokyo.jp/news/news_detail_2423.html",
-        "https://www.nfuca-tokyo.jp/news/news_detail_2393.html"
+        "https://www.nfuca-tokyo.jp/news/news_detail_2423.html"
       ],
       "evidence": {
         "date": "本日は5月2日(土)に開催された",
@@ -82,29 +81,27 @@
       "notes": []
     },
     {
-      "report": false,
-      "scheduleNote": "",
-      "id": "2399-0",
-      "title": "北甲エリアミーティング",
+      "report": true,
+      "scheduleNote": "開催報告から確認",
+      "id": "2476-0",
+      "title": "春のエリアミーティング",
       "category": "北甲エリア",
       "startDate": "2026-05-07",
       "endDate": "2026-05-07",
-      "time": "18 時~20時",
+      "time": "",
       "venue": "オンライン(Zoom)",
       "deadline": "2026-05-04",
       "deadlineTime": "終日",
-      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2399.html",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2476.html",
       "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2399.html",
-      "publishedAt": "2026-04-16",
+      "publishedAt": "2026-07-02",
       "sources": [
         "https://www.nfuca-tokyo.jp/news/news_detail_2476.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2399.html"
       ],
       "evidence": {
-        "date": "日時:2026年5月7日(木)18 時~20時",
-        "deadline": [
-          "参加申し込み〆切:2026年5月4日(月)終日まで"
-        ]
+        "date": "本日は5月7日(木)に開催されました、",
+        "deadline": []
       },
       "notes": []
     },
@@ -215,7 +212,7 @@
     },
     {
       "report": false,
-      "scheduleNote": "",
+      "scheduleNote": "元記事を再確認できないため前回情報を掲載（確認日時：2026-10-11T14:46:47+09:00）",
       "id": "2398-1",
       "title": "ICA-AP地域イマージョンプログラム｜事前ミーティング",
       "category": "連合会・共済連",
@@ -235,7 +232,9 @@
         "date": "■事前ミーティング:2026年5月15日(金)15:30~17:30(Zoom)",
         "deadline": []
       },
-      "notes": []
+      "notes": [],
+      "lastVerifiedAt": "2026-10-11T14:46:47+09:00",
+      "sourceUnavailable": true
     },
     {
       "report": true,
@@ -263,29 +262,27 @@
       "notes": []
     },
     {
-      "report": false,
-      "scheduleNote": "",
-      "id": "2396-0",
+      "report": true,
+      "scheduleNote": "開催報告から確認",
+      "id": "2541-0",
       "title": "生協スクール2026",
       "category": "東京ブロック",
       "startDate": "2026-05-30",
       "endDate": "2026-05-31",
-      "time": "13:00~17:00 / 18:00 / 10:00~16:00",
+      "time": "",
       "venue": "千葉大学 西千葉キャンパス",
       "deadline": "2026-05-15",
       "deadlineTime": "終日",
-      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2396.html",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2541.html",
       "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2396.html",
-      "publishedAt": "2026-04-15",
+      "publishedAt": "2026-09-18",
       "sources": [
         "https://www.nfuca-tokyo.jp/news/news_detail_2541.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2396.html"
       ],
       "evidence": {
-        "date": "日時:2026年5月30日(土)13:00~17:00(~18:00までは会場開放) ~31日(日)10:00~16:00",
-        "deadline": [
-          "申込締め切りは5月15日(金)終日です。"
-        ]
+        "date": "本日は5月30日(土)、31日(日)に開催されました、",
+        "deadline": []
       },
       "notes": []
     },
@@ -463,6 +460,7 @@
       "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2458.html",
       "publishedAt": "2026-06-12",
       "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2568.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2444.html",
         "https://www.nfuca-tokyo.jp/news/news_detail_2458.html"
       ],
@@ -664,7 +662,7 @@
     },
     {
       "report": false,
-      "scheduleNote": "",
+      "scheduleNote": "元記事を再確認できないため前回情報を掲載（確認日時：2026-10-11T14:46:47+09:00）",
       "id": "2398-0",
       "title": "ICA-AP地域イマージョンプログラム",
       "category": "連合会・共済連",
@@ -684,7 +682,9 @@
         "date": "■日程:2026年7月22日(水)~26日(日)(5日間/4泊)",
         "deadline": []
       },
-      "notes": []
+      "notes": [],
+      "lastVerifiedAt": "2026-10-11T14:46:47+09:00",
+      "sourceUnavailable": true
     },
     {
       "report": false,
@@ -1268,28 +1268,29 @@
       "notes": []
     },
     {
-      "id": "2549-next-4",
-      "title": "かけこみ相談会～10月編～",
+      "report": false,
+      "scheduleNote": "",
+      "id": "2571-0",
+      "title": "かけこみ相談会~10月編~",
       "category": "東京ブロック",
       "startDate": "2026-10-19",
       "endDate": "2026-10-19",
-      "time": "",
-      "venue": "",
+      "time": "18:00~19:00",
+      "venue": "オンライン(Zoom)にて",
       "deadline": null,
       "deadlineTime": "",
-      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2549.html",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2571.html",
       "deadlineSourceUrl": null,
-      "publishedAt": "2026-06-10",
+      "publishedAt": "2026-10-15",
       "sources": [
-        "https://www.nfuca-tokyo.jp/news/news_detail_2549.html"
+        "https://www.nfuca-tokyo.jp/news/news_detail_2549.html",
+        "https://www.nfuca-tokyo.jp/news/news_detail_2571.html"
       ],
       "evidence": {
-        "date": "次回の開催は10月19日(月)!トークテーマは「27年度の新学期活動について」。これからの新学期活動にお悩みをお持ちの方に特におすすめです!ぜひご参加ください!",
+        "date": "10/19(月)18:00~19:00に",
         "deadline": []
       },
-      "notes": [],
-      "report": true,
-      "scheduleNote": "開催報告内の次回予告・詳細は原文で確認"
+      "notes": []
     },
     {
       "report": false,
@@ -1370,28 +1371,55 @@
       "notes": []
     },
     {
-      "id": "2536-next-6",
+      "report": false,
+      "scheduleNote": "",
+      "id": "2569-0",
+      "title": "北甲秋のエリアミーティング",
+      "category": "北甲エリア",
+      "startDate": "2026-11-09",
+      "endDate": "2026-11-10",
+      "time": "",
+      "venue": "オンライン(Zoom)",
+      "deadline": "2026-11-05",
+      "deadlineTime": "終日",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2569.html",
+      "deadlineSourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2569.html",
+      "publishedAt": "2026-10-13",
+      "sources": [
+        "https://www.nfuca-tokyo.jp/news/news_detail_2569.html"
+      ],
+      "evidence": {
+        "date": "日程:2026年11月9日(月)、10日(火)",
+        "deadline": [
+          "参加申し込み〆切:2026年11月5日(木)終日まで"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "report": false,
+      "scheduleNote": "",
+      "id": "2563-0",
       "title": "第3回 集まれ!むさっしーず",
       "category": "武蔵野エリア",
       "startDate": "2026-11-14",
       "endDate": "2026-11-14",
-      "time": "",
-      "venue": "",
+      "time": "10:00~16:30 / 17:30",
+      "venue": "平和祈念展示資料館(都庁前駅徒歩1分) および 大学生協杉並会館",
       "deadline": null,
       "deadlineTime": "",
-      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2536.html",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2563.html",
       "deadlineSourceUrl": null,
-      "publishedAt": "2026-09-11",
+      "publishedAt": "2026-10-10",
       "sources": [
-        "https://www.nfuca-tokyo.jp/news/news_detail_2536.html"
+        "https://www.nfuca-tokyo.jp/news/news_detail_2536.html",
+        "https://www.nfuca-tokyo.jp/news/news_detail_2563.html"
       ],
       "evidence": {
-        "date": "次回の武蔵野エリア連帯「第3回 集まれ!むさっしーず」は11月14日(土)に開催予定です!",
+        "date": "○日時:11 月 14 日(土)10:00~16:30(17:30~懇親会)",
         "deadline": []
       },
-      "notes": [],
-      "report": true,
-      "scheduleNote": "開催報告内の次回予告・詳細は原文で確認"
+      "notes": []
     },
     {
       "report": false,
@@ -1468,28 +1496,29 @@
       "notes": []
     },
     {
-      "id": "2371-annual",
+      "report": false,
+      "scheduleNote": "",
+      "id": "2567-0",
+      "title": "東京ブロック大会2026",
       "category": "東京ブロック",
-      "time": "",
-      "venue": "対面（会場未発表）",
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-05",
+      "time": "11:00~18:00",
+      "venue": "埼玉大学",
       "deadline": null,
       "deadlineTime": "",
-      "sourceUrl": "https://www.nfuca-tokyo.jp/nus_im/webapp/data_file/260305125256_1.pdf",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2567.html",
       "deadlineSourceUrl": null,
-      "publishedAt": "2026-03-05",
+      "publishedAt": "2026-10-13",
       "sources": [
-        "https://www.nfuca-tokyo.jp/nus_im/webapp/data_file/260305125256_1.pdf"
+        "https://www.nfuca-tokyo.jp/nus_im/webapp/data_file/260305125256_1.pdf",
+        "https://www.nfuca-tokyo.jp/news/news_detail_2567.html"
       ],
       "evidence": {
-        "date": "年間予定表2ページ：12月5日(土) 東京ブロック大会2026 対面",
+        "date": "〇日時:12月5日(土)11:00~18:00",
         "deadline": []
       },
-      "notes": [],
-      "report": true,
-      "scheduleNote": "年間予定表（2026年3月版）の予定・詳細未発表",
-      "title": "東京ブロック大会2026",
-      "startDate": "2026-12-05",
-      "endDate": "2026-12-05"
+      "notes": []
     }
   ],
   "unconfirmed": [
@@ -1501,14 +1530,6 @@
       "reason": "本文から開催日を確定できません。添付資料を含め原文をご確認ください。"
     },
     {
-      "title": "第3回エリア連帯（北甲エリア）",
-      "category": "北甲エリア",
-      "sourceUrl": "https://www.nfuca-tokyo.jp/nus_im/webapp/data_file/260305125256_1.pdf",
-      "publishedAt": "2026-03-05",
-      "reason": "年間予定表では2026年11月上旬の予定。開催日・申込締切は未発表。",
-      "annualCategory": true
-    },
-    {
       "title": "北甲のつどい初夏2026（締切確認）",
       "category": "北甲エリア",
       "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2445.html",
@@ -1516,55 +1537,87 @@
       "reason": "日付と曜日が一致しないため原文確認が必要です"
     },
     {
+      "title": "かけこみ相談会~4月編~（元記事の確認）",
+      "category": "東京ブロック",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2400.html",
+      "publishedAt": "2026-10-18",
+      "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
+    },
+    {
       "title": "第1回分野セミナー（元記事の確認）",
       "category": "東京ブロック",
       "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2393.html",
-      "publishedAt": "2026-10-11",
+      "publishedAt": "2026-10-18",
       "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
     },
     {
-      "title": "第1回南エリアおしゃべり会（元記事の確認）",
+      "title": "北甲エリアミーティング（元記事の確認）",
+      "category": "北甲エリア",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2399.html",
+      "publishedAt": "2026-10-18",
+      "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
+    },
+    {
+      "title": "ICA-AP地域イマージョンプログラム｜事前ミーティング（元記事の確認）",
+      "category": "連合会・共済連",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2398.html",
+      "publishedAt": "2026-10-18",
+      "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
+    },
+    {
+      "title": "生協スクール2026（元記事の確認）",
+      "category": "東京ブロック",
+      "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2396.html",
+      "publishedAt": "2026-10-18",
+      "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
+    },
+    {
+      "title": "記事 2388（元記事の確認）",
       "category": "南エリア",
       "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2388.html",
-      "publishedAt": "2026-10-11",
+      "publishedAt": "2026-10-18",
       "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
     },
     {
-      "title": "第1回集まれ!むさっしーず（元記事の確認）",
+      "title": "記事 2395（元記事の確認）",
       "category": "武蔵野エリア",
       "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2395.html",
-      "publishedAt": "2026-10-11",
+      "publishedAt": "2026-10-18",
       "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
     },
     {
-      "title": "第9回事業と新学期活動全国交流会（元記事の確認）",
+      "title": "記事 2392（元記事の確認）",
       "category": "連合会・共済連",
       "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2392.html",
-      "publishedAt": "2026-10-11",
+      "publishedAt": "2026-10-18",
       "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
     },
     {
       "title": "記事 2386（元記事の確認）",
       "category": "東京ブロック",
       "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2386.html",
-      "publishedAt": "2026-10-11",
+      "publishedAt": "2026-10-18",
       "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
     },
     {
       "title": "記事 2384（元記事の確認）",
       "category": "北甲エリア",
       "sourceUrl": "https://www.nfuca-tokyo.jp/news/news_detail_2384.html",
-      "publishedAt": "2026-10-11",
+      "publishedAt": "2026-10-18",
       "reason": "公式記事を再取得できませんでした（HTTP 401）。現在取得できる別の案内を優先し、主な出典も取得できない予定は前回確認日時を付けて保持しています。"
     }
   ],
   "warnings": [
+    "https://www.nfuca-tokyo.jp/news/news_detail_2400.html",
     "https://www.nfuca-tokyo.jp/news/news_detail_2393.html",
+    "https://www.nfuca-tokyo.jp/news/news_detail_2399.html",
+    "https://www.nfuca-tokyo.jp/news/news_detail_2398.html",
+    "https://www.nfuca-tokyo.jp/news/news_detail_2396.html",
     "https://www.nfuca-tokyo.jp/news/news_detail_2388.html",
     "https://www.nfuca-tokyo.jp/news/news_detail_2395.html",
     "https://www.nfuca-tokyo.jp/news/news_detail_2392.html",
     "https://www.nfuca-tokyo.jp/news/news_detail_2386.html",
     "https://www.nfuca-tokyo.jp/news/news_detail_2384.html"
   ],
-  "articleCount": 114
+  "articleCount": 115
 }
